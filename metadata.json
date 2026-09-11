@@ -1,0 +1,6 @@
+{
+  "name": "Basaveshwar Engineering College Bagalkote",
+  "description": "Official institutional website of Basaveshwar Engineering College (Autonomous), Bagalkote, featuring admissions, examination portal, placements, departments, research, and campus life.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
