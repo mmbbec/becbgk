@@ -2,35 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta name="theme-color" content="#6e1023">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#71152a">
     <meta name="description"
           content="Basaveshwar Engineering College, Bagalkote — Engineering, Research and Impact since 1963.">
 
     <title>Basaveshwar Engineering College | Bagalkote</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://becbgk.edu">
+    <link rel="preconnect" href="https://images.unsplash.com">
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
           rel="stylesheet">
 
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Hide loader if JS is disabled -->
+    <noscript>
+        <style>
+            .page-loader { display: none !important; }
+            .reveal { opacity: 1 !important; transform: none !important; }
+        </style>
+    </noscript>
 </head>
 
 <body>
+
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- =========================================================
      PAGE LOADER
 ========================================================= -->
 
-<div class="page-loader" id="pageLoader">
+<div class="page-loader" id="pageLoader" aria-hidden="true">
     <div class="loader-mark">BEC</div>
     <div class="loader-line"></div>
 </div>
@@ -44,96 +51,71 @@
 
     <div class="header-inner">
 
-        <!-- Logo -->
-        <a href="#top" class="brand">
-
-            <div class="brand-symbol">
-                BEC
-            </div>
-
+        <a href="#top" class="brand" aria-label="BEC home">
+            <div class="brand-symbol">BEC</div>
             <div class="brand-text">
                 <strong>Basaveshwar</strong>
                 <span>Engineering College</span>
             </div>
-
         </a>
 
-
-        <!-- Desktop Navigation -->
-        <nav class="desktop-nav">
-
+        <nav class="desktop-nav" aria-label="Primary">
             <a href="#about">About</a>
-
             <a href="#academics">Academics</a>
-
             <a href="#research">Research</a>
-
             <a href="#admissions">Admissions</a>
-
             <a href="#campus">Campus</a>
-
             <a href="#placements">Placements</a>
-
             <a href="#community">Community</a>
-
         </nav>
 
-
-        <!-- Header Actions -->
         <div class="header-actions">
 
             <a href="#admissions" class="header-apply">
                 Apply 2026–27
             </a>
 
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false">
-
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-controls="mobileMenu"
+                    aria-expanded="false">
                 <span></span>
                 <span></span>
-
             </button>
 
         </div>
 
     </div>
 
-
     <!-- Mobile Navigation -->
     <div class="mobile-menu" id="mobileMenu">
-
         <div class="mobile-menu-inner">
 
-            <a href="#about">About</a>
-            <a href="#academics">Academics</a>
-            <a href="#research">Research</a>
-            <a href="#admissions">Admissions</a>
-            <a href="#campus">Campus</a>
-            <a href="#placements">Placements</a>
-            <a href="#community">Community</a>
+            <nav aria-label="Mobile">
+                <a href="#about">About</a>
+                <a href="#academics">Academics</a>
+                <a href="#research">Research</a>
+                <a href="#admissions">Admissions</a>
+                <a href="#campus">Campus</a>
+                <a href="#placements">Placements</a>
+                <a href="#community">Community</a>
+            </nav>
 
             <div class="mobile-menu-footer">
-
                 <span>Bagalkote, Karnataka</span>
-
-                <a href="tel:+917618781963">
-                    +91 76187 81963
-                </a>
-
+                <a href="tel:+917618781963">+91 76187 81963</a>
             </div>
 
         </div>
-
     </div>
 
 </header>
 
 
-<main id="top">
+<main id="main">
 
+<span id="top" aria-hidden="true"></span>
 
 <!-- =========================================================
      HERO
@@ -141,62 +123,44 @@
 
 <section class="hero">
 
-    <!-- Background -->
     <div class="hero-background">
-
-        <img
-            src="https://becbgk.edu/About_Us/img/Main_Building.JPG"
-            alt="Basaveshwar Engineering College campus">
-
+        <img src="https://becbgk.edu/About_Us/img/Main_Building.JPG"
+             alt="Basaveshwar Engineering College campus"
+             fetchpriority="high"
+             decoding="async">
     </div>
 
     <div class="hero-overlay"></div>
 
-
     <div class="hero-content page-container">
 
-        <div class="hero-kicker reveal">
+        <p class="hero-kicker reveal">
             B.V.V. Sangha's Basaveshwar Engineering College
-        </div>
-
-
-        <h1 class="hero-title reveal reveal-delay-1">
-
-            Engineering
-            <span>with purpose.</span>
-
-        </h1>
-
-
-        <p class="hero-description reveal reveal-delay-2">
-
-            A government-aided autonomous institution shaping
-            engineers, researchers and leaders since 1963.
-
         </p>
 
+        <h1 class="hero-title reveal reveal-delay-1">
+            Engineering
+            <span>with purpose.</span>
+        </h1>
+
+        <p class="hero-description reveal reveal-delay-2">
+            A government-aided autonomous institution shaping
+            engineers, researchers and leaders since 1963.
+        </p>
 
         <div class="hero-buttons reveal reveal-delay-3">
 
             <a href="#academics" class="button button-light">
-
                 Explore BEC
-
-                <span>↗</span>
-
+                <span aria-hidden="true">↗</span>
             </a>
 
-
             <a href="#admissions" class="button button-outline">
-
                 Admissions 2026–27
-
-                <span>→</span>
-
+                <span aria-hidden="true">→</span>
             </a>
 
         </div>
-
 
         <div class="hero-bottom reveal reveal-delay-4">
 
@@ -219,21 +183,16 @@
 
     </div>
 
-
-    <div class="hero-scroll">
-
+    <div class="hero-scroll" aria-hidden="true">
         <span>Scroll to explore</span>
-
         <div class="scroll-line"></div>
-
     </div>
 
 </section>
 
 
-
 <!-- =========================================================
-     INTRO / ABOUT
+     ABOUT
 ========================================================= -->
 
 <section class="section about-section" id="about">
@@ -242,77 +201,58 @@
 
         <div class="section-intro">
 
-            <div class="section-number">
-                01 / ABOUT
-            </div>
+            <div class="section-number">01 / ABOUT</div>
 
             <div>
-
                 <h2 class="display-title">
-
                     A legacy built
                     <em>for the future.</em>
-
                 </h2>
 
                 <p class="lead">
-
                     Basaveshwar Engineering College, Bagalkote,
                     is a premier technical institution established
                     in 1963 and built around education, research,
                     innovation and social impact.
-
                 </p>
-
             </div>
 
         </div>
 
-
         <div class="about-grid">
 
-            <div class="about-image reveal">
+            <figure class="about-image reveal">
+                <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1400&q=85"
+                     alt="University campus architecture"
+                     loading="lazy"
+                     decoding="async">
 
-                <img
-                    src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1400&q=85"
-                    alt="University campus architecture">
-
-                <div class="image-caption">
+                <figcaption class="image-caption">
                     <span>01</span>
                     A campus designed for learning.
-                </div>
-
-            </div>
-
+                </figcaption>
+            </figure>
 
             <div class="about-copy reveal reveal-delay-1">
 
                 <p>
-
                     From a modest beginning in 1963,
                     BEC has developed into a multidisciplinary
                     autonomous engineering institution serving
                     generations of students from Karnataka and beyond.
-
                 </p>
 
                 <p>
-
                     The institution is government-aided,
                     recognized by AICTE, permanently affiliated
                     to Visvesvaraya Technological University,
                     Belagavi, and accredited with an
                     <strong>NAAC 'A' Grade.</strong>
-
                 </p>
 
-
                 <a href="#" class="text-link">
-
                     Discover the BEC story
-
-                    <span>↗</span>
-
+                    <span aria-hidden="true">↗</span>
                 </a>
 
             </div>
@@ -322,7 +262,6 @@
     </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -336,107 +275,45 @@
         <div class="stats-grid">
 
             <div class="stat-item reveal">
-
                 <span class="stat-number counter"
-                      data-target="1963">
-                    0
-                </span>
-
-                <span class="stat-label">
-                    Established
-                </span>
-
+                      data-target="1963"
+                      data-format="plain">1963</span>
+                <span class="stat-label">Established</span>
             </div>
-
 
             <div class="stat-item reveal reveal-delay-1">
-
-                <span class="stat-number">
-                    93+
-                </span>
-
-                <span class="stat-label">
-                    Acres Campus
-                </span>
-
+                <span class="stat-number counter" data-target="93">0</span>
+                <span class="stat-label">Acres Campus</span>
             </div>
-
 
             <div class="stat-item reveal reveal-delay-2">
-
-                <span class="stat-number">
-                    10
-                </span>
-
-                <span class="stat-label">
-                    UG Programmes
-                </span>
-
+                <span class="stat-number counter" data-target="10">0</span>
+                <span class="stat-label">UG Programmes</span>
             </div>
-
 
             <div class="stat-item reveal reveal-delay-3">
-
-                <span class="stat-number">
-                    3
-                </span>
-
-                <span class="stat-label">
-                    PG Programmes
-                </span>
-
+                <span class="stat-number counter" data-target="3">0</span>
+                <span class="stat-label">PG Programmes</span>
             </div>
-
 
             <div class="stat-item reveal">
-
-                <span class="stat-number">
-                    10
-                </span>
-
-                <span class="stat-label">
-                    Research Centres
-                </span>
-
+                <span class="stat-number counter" data-target="10">0</span>
+                <span class="stat-label">Research Centres</span>
             </div>
-
 
             <div class="stat-item reveal reveal-delay-1">
-
-                <span class="stat-number">
-                    20K+
-                </span>
-
-                <span class="stat-label">
-                    Alumni
-                </span>
-
+                <span class="stat-number">20K+</span>
+                <span class="stat-label">Alumni</span>
             </div>
-
 
             <div class="stat-item reveal reveal-delay-2">
-
-                <span class="stat-number">
-                    200+
-                </span>
-
-                <span class="stat-label">
-                    Faculty
-                </span>
-
+                <span class="stat-number counter" data-target="200">0</span>
+                <span class="stat-label">Faculty</span>
             </div>
 
-
             <div class="stat-item reveal reveal-delay-3">
-
-                <span class="stat-number">
-                    89
-                </span>
-
-                <span class="stat-label">
-                    Faculty with PhDs
-                </span>
-
+                <span class="stat-number counter" data-target="89">0</span>
+                <span class="stat-label">Faculty with PhDs</span>
             </div>
 
         </div>
@@ -444,7 +321,6 @@
     </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -458,242 +334,125 @@
         <div class="section-heading-row">
 
             <div>
-
-                <div class="section-number">
-                    02 / ACADEMICS
-                </div>
-
+                <div class="section-number">02 / ACADEMICS</div>
                 <h2 class="display-title">
-
                     Learn beyond
                     <em>the syllabus.</em>
-
                 </h2>
-
             </div>
 
-
             <p class="section-side-text">
-
                 A multidisciplinary academic ecosystem
                 connecting engineering, technology,
                 management and research.
-
             </p>
 
         </div>
 
-
         <div class="programme-list">
 
             <a href="#" class="programme-row">
-
                 <div class="programme-number">01</div>
-
                 <div class="programme-main">
-
-                    <h3>Computer Science & Engineering</h3>
-
-                    <p>
-                        Computing · Software · Intelligent Systems
-                    </p>
-
+                    <h3>Computer Science &amp; Engineering</h3>
+                    <p>Computing · Software · Intelligent Systems</p>
                 </div>
-
-                <span class="programme-arrow">↗</span>
-
+                <span class="programme-arrow" aria-hidden="true">↗</span>
             </a>
 
-
             <a href="#" class="programme-row">
-
                 <div class="programme-number">02</div>
-
                 <div class="programme-main">
-
-                    <h3>Artificial Intelligence & Machine Learning</h3>
-
-                    <p>
-                        AI · Machine Learning · Data-driven Systems
-                    </p>
-
+                    <h3>Artificial Intelligence &amp; Machine Learning</h3>
+                    <p>AI · Machine Learning · Data-driven Systems</p>
                 </div>
-
-                <span class="programme-arrow">↗</span>
-
+                <span class="programme-arrow" aria-hidden="true">↗</span>
             </a>
 
-
             <a href="#" class="programme-row">
-
                 <div class="programme-number">03</div>
-
                 <div class="programme-main">
-
-                    <h3>Electronics & Communication</h3>
-
-                    <p>
-                        Electronics · Communication · Embedded Systems
-                    </p>
-
+                    <h3>Electronics &amp; Communication</h3>
+                    <p>Electronics · Communication · Embedded Systems</p>
                 </div>
-
-                <span class="programme-arrow">↗</span>
-
+                <span class="programme-arrow" aria-hidden="true">↗</span>
             </a>
 
-
             <a href="#" class="programme-row">
-
                 <div class="programme-number">04</div>
-
                 <div class="programme-main">
-
                     <h3>Civil Engineering</h3>
-
-                    <p>
-                        Infrastructure · Structures · Sustainable Engineering
-                    </p>
-
+                    <p>Infrastructure · Structures · Sustainable Engineering</p>
                 </div>
-
-                <span class="programme-arrow">↗</span>
-
+                <span class="programme-arrow" aria-hidden="true">↗</span>
             </a>
 
-
             <a href="#" class="programme-row">
-
                 <div class="programme-number">05</div>
-
                 <div class="programme-main">
-
                     <h3>Mechanical Engineering</h3>
-
-                    <p>
-                        Manufacturing · Design · Automation
-                    </p>
-
+                    <p>Manufacturing · Design · Automation</p>
                 </div>
-
-                <span class="programme-arrow">↗</span>
-
+                <span class="programme-arrow" aria-hidden="true">↗</span>
             </a>
 
-
             <a href="#" class="programme-row">
-
                 <div class="programme-number">06</div>
-
                 <div class="programme-main">
-
-                    <h3>Electrical & Electronics Engineering</h3>
-
-                    <p>
-                        Power · Energy · Electrical Systems
-                    </p>
-
+                    <h3>Electrical &amp; Electronics Engineering</h3>
+                    <p>Power · Energy · Electrical Systems</p>
                 </div>
-
-                <span class="programme-arrow">↗</span>
-
+                <span class="programme-arrow" aria-hidden="true">↗</span>
             </a>
 
-
             <a href="#" class="programme-row">
-
                 <div class="programme-number">07</div>
-
                 <div class="programme-main">
-
                     <h3>Biotechnology</h3>
-
-                    <p>
-                        Biotechnology · Life Sciences · Research
-                    </p>
-
+                    <p>Biotechnology · Life Sciences · Research</p>
                 </div>
-
-                <span class="programme-arrow">↗</span>
-
+                <span class="programme-arrow" aria-hidden="true">↗</span>
             </a>
 
-
             <a href="#" class="programme-row">
-
                 <div class="programme-number">08</div>
-
                 <div class="programme-main">
-
-                    <h3>Information Science & Engineering</h3>
-
-                    <p>
-                        Information Systems · Computing · Technology
-                    </p>
-
+                    <h3>Information Science &amp; Engineering</h3>
+                    <p>Information Systems · Computing · Technology</p>
                 </div>
-
-                <span class="programme-arrow">↗</span>
-
+                <span class="programme-arrow" aria-hidden="true">↗</span>
             </a>
 
-
             <a href="#" class="programme-row">
-
                 <div class="programme-number">09</div>
-
                 <div class="programme-main">
-
-                    <h3>Electronics & Computer Engineering</h3>
-
-                    <p>
-                        Electronics · Computing · Digital Technologies
-                    </p>
-
+                    <h3>Electronics &amp; Computer Engineering</h3>
+                    <p>Electronics · Computing · Digital Technologies</p>
                 </div>
-
-                <span class="programme-arrow">↗</span>
-
+                <span class="programme-arrow" aria-hidden="true">↗</span>
             </a>
 
-
             <a href="#" class="programme-row">
-
                 <div class="programme-number">10</div>
-
                 <div class="programme-main">
-
-                    <h3>Industrial & Production Engineering</h3>
-
-                    <p>
-                        Manufacturing · Production · Industrial Systems
-                    </p>
-
+                    <h3>Industrial &amp; Production Engineering</h3>
+                    <p>Manufacturing · Production · Industrial Systems</p>
                 </div>
-
-                <span class="programme-arrow">↗</span>
-
+                <span class="programme-arrow" aria-hidden="true">↗</span>
             </a>
 
         </div>
 
-
         <div class="section-action">
-
             <a href="#" class="button button-dark">
-
                 View all programmes
-
-                <span>→</span>
-
+                <span aria-hidden="true">→</span>
             </a>
-
         </div>
 
     </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -704,112 +463,74 @@
 
     <div class="page-container">
 
-        <div class="section-number light-number">
-            03 / RESEARCH & INNOVATION
-        </div>
-
+        <div class="section-number light-number">03 / RESEARCH &amp; INNOVATION</div>
 
         <div class="research-heading">
 
             <h2 class="display-title light-title">
-
                 Ideas become
                 <em>impact.</em>
-
             </h2>
 
             <p>
-
                 BEC's research ecosystem connects academic
                 knowledge with laboratories, industry,
                 innovation and entrepreneurship.
-
             </p>
 
         </div>
-
 
         <div class="research-grid">
 
             <article class="research-card large-card">
 
                 <div class="research-card-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=85"
-                        alt="Engineering research laboratory">
-
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=85"
+                         alt="Engineering research laboratory"
+                         loading="lazy"
+                         decoding="async">
                 </div>
 
                 <div class="research-card-content">
-
                     <span>01</span>
-
                     <h3>Research Centres</h3>
-
                     <p>
                         VTU-recognized research centres supporting
                         advanced engineering research and doctoral work.
                     </p>
-
                     <a href="#">Explore research →</a>
-
                 </div>
 
             </article>
 
-
             <article class="research-card">
-
-                <div class="research-icon">
-                    02
-                </div>
-
+                <div class="research-icon">02</div>
                 <h3>Innovation</h3>
-
                 <p>
                     Institute Innovation Council, IDEA Lab
                     and student innovation initiatives.
                 </p>
-
                 <a href="#">Discover innovation →</a>
-
             </article>
 
-
             <article class="research-card">
-
-                <div class="research-icon">
-                    03
-                </div>
-
+                <div class="research-icon">03</div>
                 <h3>Entrepreneurship</h3>
-
                 <p>
                     BEC-STEP supports ideas, entrepreneurship
                     and technology-driven initiatives.
                 </p>
-
                 <a href="#">Explore BEC-STEP →</a>
-
             </article>
 
-
             <article class="research-card">
-
-                <div class="research-icon">
-                    04
-                </div>
-
+                <div class="research-icon">04</div>
                 <h3>Doctoral Research</h3>
-
                 <p>
                     Ph.D. and M.Sc. (Engg.) opportunities
                     across recognized research areas.
                 </p>
-
                 <a href="#">Research programmes →</a>
-
             </article>
 
         </div>
@@ -817,7 +538,6 @@
     </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -831,132 +551,84 @@
         <div class="section-heading-row">
 
             <div>
-
-                <div class="section-number">
-                    04 / CAREERS
-                </div>
-
+                <div class="section-number">04 / CAREERS</div>
                 <h2 class="display-title">
-
                     Where careers
                     <em>take off.</em>
-
                 </h2>
-
             </div>
 
             <p class="section-side-text">
-
                 Connecting BEC graduates with leading
                 companies, opportunities and ambitious careers.
-
             </p>
 
         </div>
 
-
         <div class="placement-feature">
 
             <div class="placement-image">
-
-                <img
-                    src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=85"
-                    alt="Students collaborating">
+                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=85"
+                     alt="Students collaborating"
+                     loading="lazy"
+                     decoding="async">
 
                 <div class="placement-image-label">
-                    Career Guidance & Placement
+                    Career Guidance &amp; Placement
                 </div>
-
             </div>
-
 
             <div class="placement-data">
 
                 <div class="placement-year">
-
                     <span>2026 BATCH</span>
-
                     <strong>450</strong>
-
                     <small>Placement Offers</small>
-
                 </div>
-
 
                 <div class="placement-metrics">
-
                     <div>
-
                         <strong>670</strong>
-
                         <span>Eligible Students</span>
-
                     </div>
-
                     <div>
-
                         <strong>332</strong>
-
                         <span>Students Placed</span>
-
                     </div>
-
                     <div>
-
                         <strong>450</strong>
-
                         <span>Offers Received</span>
-
                     </div>
-
                 </div>
 
-
                 <div class="placement-copy">
-
                     <p>
-
                         BEC's placement ecosystem combines
                         career guidance, industry interaction,
                         training and campus recruitment.
-
                     </p>
-
                     <a href="#" class="text-link">
-
                         Explore placements
-
-                        <span>↗</span>
-
+                        <span aria-hidden="true">↗</span>
                     </a>
-
                 </div>
 
             </div>
 
         </div>
 
-
         <div class="previous-placement">
-
             <span>2025 BATCH</span>
-
             <strong>442</strong>
-
             <p>placement offers</p>
-
-            <span class="placement-separator"></span>
-
+            <span class="placement-separator" aria-hidden="true"></span>
             <strong>250</strong>
-
             <p>students placed</p>
-
         </div>
 
     </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -966,53 +638,37 @@
 <section class="campus-section" id="campus">
 
     <div class="campus-image">
-
-        <img
-            src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=2000&q=90"
-            alt="University campus">
-
+        <img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=2000&q=90"
+             alt="University campus"
+             loading="lazy"
+             decoding="async">
     </div>
-
 
     <div class="campus-overlay"></div>
 
-
     <div class="page-container campus-content">
 
-        <div class="section-number light-number">
-            05 / CAMPUS
-        </div>
-
+        <div class="section-number light-number">05 / CAMPUS</div>
 
         <h2 class="display-title light-title">
-
             93 acres.
             <br>
             <em>One community.</em>
-
         </h2>
 
-
         <p>
-
             A green campus designed for learning,
             collaboration, exploration and student life.
-
         </p>
 
-
         <a href="#" class="button button-light">
-
             Explore campus
-
-            <span>↗</span>
-
+            <span aria-hidden="true">↗</span>
         </a>
 
     </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -1023,74 +679,48 @@
 
     <div class="page-container">
 
-        <div class="section-number">
-            CAMPUS LIFE
-        </div>
-
+        <div class="section-number">CAMPUS LIFE</div>
 
         <div class="features-grid">
 
             <article class="feature-item">
-
                 <span>01</span>
-
                 <h3>Library</h3>
-
                 <p>
                     Extensive print and digital learning resources,
                     reading spaces and research support.
                 </p>
-
                 <a href="#">Explore library →</a>
-
             </article>
 
-
             <article class="feature-item">
-
                 <span>02</span>
-
                 <h3>Hostels</h3>
-
                 <p>
                     Residential facilities supporting
                     a vibrant student community.
                 </p>
-
                 <a href="#">Explore hostels →</a>
-
             </article>
 
-
             <article class="feature-item">
-
                 <span>03</span>
-
                 <h3>Student Life</h3>
-
                 <p>
                     Technical clubs, cultural activities,
                     sports, IEEE, YRC and student communities.
                 </p>
-
                 <a href="#">Discover student life →</a>
-
             </article>
 
-
             <article class="feature-item">
-
                 <span>04</span>
-
                 <h3>BEC Dhwani</h3>
-
                 <p>
                     90.4 FM community radio connecting
                     the campus and surrounding community.
                 </p>
-
                 <a href="#">Explore BEC Dhwani →</a>
-
             </article>
 
         </div>
@@ -1098,7 +728,6 @@
     </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -1112,83 +741,45 @@
         <div class="quality-layout">
 
             <div>
-
-                <div class="section-number">
-                    06 / QUALITY
-                </div>
+                <div class="section-number">06 / QUALITY</div>
 
                 <h2 class="display-title">
-
                     Built on
                     <em>trust.</em>
-
                 </h2>
 
                 <p class="lead">
-
                     Academic quality, institutional governance
                     and continuous improvement remain central
                     to the BEC ecosystem.
-
                 </p>
-
             </div>
-
 
             <div class="accreditation-list">
 
                 <div class="accreditation-item">
-
                     <strong>NAAC</strong>
-
-                    <span>
-                        A Grade · 2024–2029
-                    </span>
-
+                    <span>A Grade · 2024–2029</span>
                 </div>
 
-
                 <div class="accreditation-item">
-
                     <strong>NBA</strong>
-
-                    <span>
-                        Accredited UG Programmes
-                    </span>
-
+                    <span>Accredited UG Programmes</span>
                 </div>
 
-
                 <div class="accreditation-item">
-
                     <strong>AICTE</strong>
-
-                    <span>
-                        Recognized Institution
-                    </span>
-
+                    <span>Recognized Institution</span>
                 </div>
 
-
                 <div class="accreditation-item">
-
                     <strong>VTU</strong>
-
-                    <span>
-                        Permanently Affiliated
-                    </span>
-
+                    <span>Permanently Affiliated</span>
                 </div>
 
-
                 <div class="accreditation-item">
-
                     <strong>IQAC</strong>
-
-                    <span>
-                        Continuous Quality Improvement
-                    </span>
-
+                    <span>Continuous Quality Improvement</span>
                 </div>
 
             </div>
@@ -1198,7 +789,6 @@
     </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -1212,84 +802,47 @@
         <div class="section-heading-row">
 
             <div>
-
-                <div class="section-number">
-                    07 / NEWS
-                </div>
-
+                <div class="section-number">07 / NEWS</div>
                 <h2 class="display-title">
-
                     What's happening
                     <em>at BEC.</em>
-
                 </h2>
-
             </div>
 
-
             <a href="#" class="text-link">
-
                 View all news
-                <span>↗</span>
-
+                <span aria-hidden="true">↗</span>
             </a>
 
         </div>
 
-
         <div class="news-grid">
 
             <article class="news-card">
-
-                <div class="news-date">
-                    JUN 12 · 2026
-                </div>
-
+                <div class="news-date">JUN 12 · 2026</div>
                 <h3>
                     IEEE Power and Energy Society
                     organizes cultural activity
                 </h3>
-
-                <a href="#">
-                    Read story →
-                </a>
-
+                <a href="#">Read story →</a>
             </article>
 
-
             <article class="news-card featured-news">
-
-                <div class="news-date">
-                    JUN 05 · 2026
-                </div>
-
+                <div class="news-date">JUN 05 · 2026</div>
                 <h3>
                     Institute Innovation Council
                     and Civil Engineering research programme
                 </h3>
-
-                <a href="#">
-                    Read story →
-                </a>
-
+                <a href="#">Read story →</a>
             </article>
 
-
             <article class="news-card">
-
-                <div class="news-date">
-                    MAY 23 · 2026
-                </div>
-
+                <div class="news-date">MAY 23 · 2026</div>
                 <h3>
                     Department of ECS conducts
                     CIRCUTECH 2026
                 </h3>
-
-                <a href="#">
-                    Read story →
-                </a>
-
+                <a href="#">Read story →</a>
             </article>
 
         </div>
@@ -1297,7 +850,6 @@
     </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -1314,43 +866,27 @@
                 08 / ADMISSIONS 2026–27
             </div>
 
-
             <h2>
-
                 Your next chapter
                 <br>
-
                 <em>starts here.</em>
-
             </h2>
 
-
             <p>
-
                 Explore B.E., M.Tech, MBA, MCA and
                 research opportunities at BEC.
-
             </p>
-
 
             <div class="admission-buttons">
 
                 <a href="#" class="button button-light">
-
                     Explore admissions
-
-                    <span>↗</span>
-
+                    <span aria-hidden="true">↗</span>
                 </a>
 
-
-                <a href="tel:+919902684833"
-                   class="button button-outline-light">
-
+                <a href="tel:+919902684833" class="button button-outline-light">
                     Admission enquiry
-
-                    <span>→</span>
-
+                    <span aria-hidden="true">→</span>
                 </a>
 
             </div>
@@ -1360,7 +896,6 @@
     </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -1374,72 +909,44 @@
         <div class="community-grid">
 
             <div>
-
-                <div class="section-number">
-                    09 / COMMUNITY
-                </div>
+                <div class="section-number">09 / COMMUNITY</div>
 
                 <h2 class="display-title">
-
                     More than
                     <em>academics.</em>
-
                 </h2>
 
                 <p class="lead">
-
                     A community shaped by students,
                     faculty, alumni, mentors and partners.
-
                 </p>
-
             </div>
-
 
             <div class="community-links">
 
                 <a href="#">
-
                     <span>Student Clubs</span>
-
-                    <strong>↗</strong>
-
+                    <strong aria-hidden="true">↗</strong>
                 </a>
 
-
                 <a href="#">
-
                     <span>Alumni</span>
-
-                    <strong>↗</strong>
-
+                    <strong aria-hidden="true">↗</strong>
                 </a>
 
-
                 <a href="#">
-
                     <span>Youth Red Cross</span>
-
-                    <strong>↗</strong>
-
+                    <strong aria-hidden="true">↗</strong>
                 </a>
 
-
                 <a href="#">
-
                     <span>IEEE</span>
-
-                    <strong>↗</strong>
-
+                    <strong aria-hidden="true">↗</strong>
                 </a>
 
-
                 <a href="#">
-
-                    <span>Sports & Culture</span>
-
-                    <strong>↗</strong>
-
+                    <span>Sports &amp; Culture</span>
+                    <strong aria-hidden="true">↗</strong>
                 </a>
 
             </div>
@@ -1451,9 +958,7 @@
 </section>
 
 
-
 </main>
-
 
 
 <!-- =========================================================
@@ -1467,10 +972,7 @@
         <div class="footer-top">
 
             <div class="footer-brand">
-
-                <div class="footer-mark">
-                    BEC
-                </div>
+                <div class="footer-mark">BEC</div>
 
                 <h3>
                     Basaveshwar
@@ -1478,61 +980,41 @@
                     Engineering College
                 </h3>
 
-                <p>
-                    Engineering · Research · Impact
-                </p>
-
+                <p>Engineering · Research · Impact</p>
             </div>
 
-
             <div class="footer-column">
-
                 <h4>Explore</h4>
-
                 <a href="#about">About</a>
                 <a href="#academics">Academics</a>
                 <a href="#research">Research</a>
                 <a href="#campus">Campus</a>
                 <a href="#community">Community</a>
-
             </div>
 
-
             <div class="footer-column">
-
                 <h4>Admissions</h4>
-
                 <a href="#admissions">B.E.</a>
                 <a href="#admissions">M.Tech</a>
                 <a href="#admissions">MBA</a>
                 <a href="#admissions">MCA</a>
                 <a href="#admissions">Ph.D.</a>
-
             </div>
 
-
             <div class="footer-column">
-
                 <h4>Connect</h4>
 
-                <a href="tel:+917618781963">
-                    +91 76187 81963
-                </a>
-
-                <a href="mailto:principal@becbgk.edu">
-                    principal@becbgk.edu
-                </a>
+                <a href="tel:+917618781963">+91 76187 81963</a>
+                <a href="mailto:principal@becbgk.edu">principal@becbgk.edu</a>
 
                 <span>
                     S. Nijalingappa Vidyanagar,
                     Bagalkote – 587102,
                     Karnataka, India
                 </span>
-
             </div>
 
         </div>
-
 
         <div class="footer-bottom">
 
@@ -1541,15 +1023,10 @@
                 All rights reserved.
             </span>
 
-
             <div>
-
                 <a href="#">Privacy</a>
-
                 <a href="#">Accessibility</a>
-
                 <a href="#">Sitemap</a>
-
             </div>
 
         </div>
@@ -1559,17 +1036,13 @@
 </footer>
 
 
-
 <!-- =========================================================
      BACK TO TOP
 ========================================================= -->
 
-<button class="back-top" id="backTop" aria-label="Back to top">
-    ↑
-</button>
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
 
 
-<!-- JavaScript -->
 <script src="js/script.js"></script>
 
 </body>
